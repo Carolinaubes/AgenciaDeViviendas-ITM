@@ -162,20 +162,45 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Clases\clsVivienda.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ViviendaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Agencia.cs">
+      <DependentUpon>AgenciaViviendas.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AgenciaViviendas.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AgenciaViviendas.Context.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\AgenciaViviendas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AgenciaViviendas.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\AgenciaViviendas.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AgenciaViviendas.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cliente.cs">
+      <DependentUpon>AgenciaViviendas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>AgenciaViviendas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TipoVivienda.cs">
+      <DependentUpon>AgenciaViviendas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Venta.cs">
+      <DependentUpon>AgenciaViviendas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Vivienda.cs">
+      <DependentUpon>AgenciaViviendas.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -202,6 +227,12 @@
     <Content Include="Models\AgenciaViviendas.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>AgenciaViviendas.Context.cs</LastGenOutput>
+      <DependentUpon>AgenciaViviendas.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\AgenciaViviendas.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AgenciaViviendas.edmx</DependentUpon>
+      <LastGenOutput>AgenciaViviendas.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -232,9 +263,9 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>AgenciaViviendas.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Models\AgenciaViviendas.edmx.diagram">
+    <Content Include="Models\AgenciaViviendas.edmx.diagram">
       <DependentUpon>AgenciaViviendas.edmx</DependentUpon>
-    </None>
+    </Content>
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />

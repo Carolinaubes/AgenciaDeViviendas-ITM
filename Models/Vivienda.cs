@@ -34,8 +34,8 @@ namespace AgenciaViviendas.Models
         public virtual Agencia Agencia { get; set; }
         [JsonIgnore]
         public virtual TipoVivienda TipoVivienda { get; set; }
-        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [JsonIgnore]
         public virtual ICollection<Venta> Ventas { get; set; }
     }
 }

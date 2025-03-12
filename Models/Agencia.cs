@@ -9,6 +9,7 @@
 
 namespace AgenciaViviendas.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -26,7 +27,8 @@ namespace AgenciaViviendas.Models
         public string Email { get; set; }
         public string Telefono { get; set; }
         public string Ubicacion { get; set; }
-    
+
+        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Vivienda> Viviendas { get; set; }
     }
